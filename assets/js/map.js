@@ -60,41 +60,61 @@ var chart = Highcharts.mapChart('container', {
         // Use id instead of name to allow for referencing points later using
         // chart.get
         data: [{
-            id: 'Aleppo',
-            lat: 51.507222,
-            lon: -0.1275
+            id: 'Damascus',
+            lat: 33.517175,
+            lon: 36.27671
         }, {
-            id: 'Birmingham',
-            lat: 52.483056,
-            lon: -1.893611
+             id: 'Aleppo',
+            lat: 36.310003,
+            lon: 37.205732
         }, {
-            id: 'Leeds',
-            lat: 53.799722,
-            lon: -1.549167
+             id: 'Rural Damascus',
+            lat: 33.324514,
+            lon: 36.216111
         }, {
-            id: 'Glasgow',
-            lat: 55.858,
-            lon: -4.259
+           id: 'Homs',
+            lat: 34.664643,
+            lon: 36.667828
         }, {
-            id: 'Sheffield',
-            lat: 53.383611,
-            lon: -1.466944
+            id: 'Hama',
+            lat: 35.122096,
+            lon: 36.861707
         }, {
-            id: 'Liverpool',
-            lat: 53.4,
-            lon: -3
+             id: 'Lattakia',
+            lat: 35.587201,
+            lon: 35.850598
         }, {
-            id: 'Bristol',
-            lat: 51.45,
-            lon: -2.583333
+            id: 'Idleb',
+            lat: 35.885585,
+            lon: 36.441917
         }, {
-            id: 'Belfast',
-            lat: 54.597,
-            lon: -5.93
+             id: 'Quneitra',
+            lat: 33.086196,
+            lon: 35.87256,
         }, {
-            id: 'Lerwick',
-            lat: 60.155,
-            lon: -1.145,
+             id: 'As-Sweida',
+            lat: 32.594836,
+            lon: 36.53365
+        },  {
+            id: 'Dara',
+            lat: 32.563734,
+            lon: 36.243502
+        },{
+            id: 'Tartous',
+            lat: 35.266374,
+            lon: 35.925651
+        }, {
+            id: 'Ar-Raqqa',
+            lat: 35.961465,
+            lon: 38.646968
+        },{
+           id: 'Al-Hasakeh',
+            lat: 36.614218,
+            lon: 40.729504
+        }, {
+             id: 'Deir-ez-Zor',
+            lat: 35.420632,
+            lon: 40.052596,
             dataLabels: {
                 align: 'left',
                 x: 5,
@@ -103,6 +123,7 @@ var chart = Highcharts.mapChart('container', {
         }]
     }]
 });
+
 
 // Function to return an SVG path between two points, with an arc
 function pointsToPath(from, to, invertArc) {
