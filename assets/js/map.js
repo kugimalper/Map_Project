@@ -21,7 +21,7 @@ var chart = Highcharts.mapChart('container', {
         formatter: function () {
             return this.point.id + (
                 this.point.lat ?
-                '<br>Lat: ' + this.point.lat + ' Lon: ' + this.point.lon : ''
+                '<br>Number of IDPs: ' + this.point.lat: ''
             );
         }
     },
@@ -40,7 +40,7 @@ var chart = Highcharts.mapChart('container', {
         // Use the gb-all map with no data as a basemap
         mapData: Highcharts.maps['countries/sy/sy-all'],
         name: 'Basemap',
-        borderColor: '#707070',
+        borderColor: '#666666',
         nullColor: 'rgba(200, 200, 200, 0.3)',
         showInLegend: false
     }, {
@@ -53,7 +53,7 @@ var chart = Highcharts.mapChart('container', {
     }, {
         // Specify cities using lat/lon
         type: 'mappoint',
-        name: 'Cities',
+        name: 'Governorates',
         dataLabels: {
             format: '{point.id}'
         },
@@ -133,8 +133,8 @@ function pointsToPath(from, to, invertArc) {
             ',' + to.x + ' ' + to.y;
 }
 
-var londonPoint = chart.get('London'),
-    lerwickPoint = chart.get('Lerwick');
+var aleppoPoint = chart.get('Aleppo'),
+    daraPoint = chart.get('Dara');
 
 // Add a series of lines for London
 chart.addSeries({
@@ -144,25 +144,25 @@ chart.addSeries({
     color: Highcharts.getOptions().colors[3],
     data: [{
         id: 'London - Glasgow',
-        path: pointsToPath(londonPoint, chart.get('Glasgow'))
+        path: pointsToPath(aleppoPoint, chart.get('Dara'))
     }, {
         id: 'London - Belfast',
-        path: pointsToPath(londonPoint, chart.get('Belfast'), true)
+        path: pointsToPath(aleppoPoint, chart.get('Idleb'), true)
     }, {
         id: 'London - Leeds',
-        path: pointsToPath(londonPoint, chart.get('Leeds'))
+        path: pointsToPath(aleppoPoint, chart.get('Hama'))
     }, {
         id: 'London - Liverpool',
-        path: pointsToPath(londonPoint, chart.get('Liverpool'), true)
+        path: pointsToPath(aleppoPoint, chart.get('Damascus'), true)
     }, {
         id: 'London - Sheffield',
-        path: pointsToPath(londonPoint, chart.get('Sheffield'))
+        path: pointsToPath(aleppoPoint, chart.get('Rural Damascus'))
     }, {
         id: 'London - Birmingham',
-        path: pointsToPath(londonPoint, chart.get('Birmingham'), true)
+        path: pointsToPath(aleppoPoint, chart.get('Homs'), true)
     }, {
         id: 'London - Bristol',
-        path: pointsToPath(londonPoint, chart.get('Bristol'), true)
+        path: pointsToPath(aleppoPoint, chart.get('Deir-ez-Zor'), true)
     }]
 });
 
@@ -174,15 +174,15 @@ chart.addSeries({
     color: Highcharts.getOptions().colors[5],
     data: [{
         id: 'Lerwick - Glasgow',
-        path: pointsToPath(lerwickPoint, chart.get('Glasgow'))
+        path: pointsToPath(daraPoint, chart.get('Deir-ez-Zor'))
     }, {
         id: 'Lerwick - Belfast',
-        path: pointsToPath(lerwickPoint, chart.get('Belfast'))
+        path: pointsToPath(daraPoint, chart.get('Ar-Raqqa'))
     }, {
         id: 'Lerwick - Leeds',
-        path: pointsToPath(lerwickPoint, chart.get('Leeds'))
+        path: pointsToPath(daraPoint, chart.get('As-Sweida'))
     }, {
         id: 'Lerwick - Liverpool',
-        path: pointsToPath(lerwickPoint, chart.get('Liverpool'))
+        path: pointsToPath(daraPoint, chart.get('Quneitra'))
     }]
 });
