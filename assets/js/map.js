@@ -47,7 +47,7 @@ var chart = Highcharts.mapChart('container', {
         name: 'Separators',
         type: 'mapline',
         data: Highcharts.geojson(Highcharts.maps['countries/sy/sy-all'], 'mapline'),
-        color: '#707070',
+        color: '#9fa3a1',
         showInLegend: false,
         enableMouseTracking: false
     }, {
@@ -173,16 +173,16 @@ chart.addSeries({
     lineWidth: 2,
     color: Highcharts.getOptions().colors[5],
     data: [{
-        id: 'Lerwick - Glasgow',
+        id: 'From Dara to Deir-ez-Zor ',
         path: pointsToPath(daraPoint, chart.get('Deir-ez-Zor'))
     }, {
-        id: 'Lerwick - Belfast',
+        id: 'From Dara to Ar-Raqqa',
         path: pointsToPath(daraPoint, chart.get('Ar-Raqqa'))
     }, {
-        id: 'Lerwick - Leeds',
+        id: 'From Dara to As-Sweida',
         path: pointsToPath(daraPoint, chart.get('As-Sweida'))
     }, {
-        id: 'Lerwick - Liverpool',
+        id: 'From Dara to Quneitra',
         path: pointsToPath(daraPoint, chart.get('Quneitra'))
     }]
 });
