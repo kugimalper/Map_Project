@@ -69,12 +69,12 @@ var chart = Highcharts.mapChart('container', {
             lon: 37.205732
         }, {
              id: 'Rural Damascus',
-            lat: 33.324514,
-            lon: 36.216111
+            lat: 33.313482,
+            lon: 37.321121 
         }, {
            id: 'Homs',
-            lat: 34.664643,
-            lon: 36.667828
+            lat: 34.4623,
+            lon: 38.2423
         }, {
             id: 'Hama',
             lat: 35.122096,
@@ -89,20 +89,20 @@ var chart = Highcharts.mapChart('container', {
             lon: 36.441917
         }, {
              id: 'Quneitra',
-            lat: 33.086196,
-            lon: 35.87256,
+            lat: 33.052686,
+            lon: 35.865886,
         }, {
              id: 'As-Sweida',
-            lat: 32.594836,
+            lat: 32.787710,
             lon: 36.53365
         },  {
             id: 'Dara',
-            lat: 32.563734,
-            lon: 36.243502
+            lat: 32.904969,
+            lon: 36.156751
         },{
             id: 'Tartous',
-            lat: 35.266374,
-            lon: 35.925651
+            lat: 34.930081,
+            lon: 36.071186
         }, {
             id: 'Ar-Raqqa',
             lat: 35.961465,
