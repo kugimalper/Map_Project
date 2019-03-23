@@ -4,7 +4,7 @@
 var chart = Highcharts.mapChart('container', {
 
     title: {
-        text: 'Highmaps simple flight routes demo'
+        text: 'Syria Interactive map'
     },
 
     legend: {
@@ -138,7 +138,7 @@ var aleppoPoint = chart.get('Aleppo'),
 
 // Add a series of lines for London
 chart.addSeries({
-    name: 'London flight routes',
+    name: 'IDPs',
     type: 'mapline',
     lineWidth: 2,
     color: Highcharts.getOptions().colors[3],
@@ -168,7 +168,7 @@ chart.addSeries({
 
 // Add a series of lines for Lerwick
 chart.addSeries({
-    name: 'Lerwick flight routes',
+    name: 'Returnees',
     type: 'mapline',
     lineWidth: 2,
     color: Highcharts.getOptions().colors[5],
