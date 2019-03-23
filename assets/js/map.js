@@ -143,25 +143,25 @@ chart.addSeries({
     lineWidth: 2,
     color: Highcharts.getOptions().colors[3],
     data: [{
-        id: 'London - Glasgow',
+        id: 'Aleppo - Dara',
         path: pointsToPath(aleppoPoint, chart.get('Dara'))
     }, {
-        id: 'London - Belfast',
+        id: 'Aleppo - Idleb',
         path: pointsToPath(aleppoPoint, chart.get('Idleb'), true)
     }, {
-        id: 'London - Leeds',
+        id: 'Aleppo - Hama',
         path: pointsToPath(aleppoPoint, chart.get('Hama'))
     }, {
-        id: 'London - Liverpool',
+        id: 'Aleppo - Damascus',
         path: pointsToPath(aleppoPoint, chart.get('Damascus'), true)
     }, {
-        id: 'London - Sheffield',
+        id: 'Aleppo - Rural Damascus',
         path: pointsToPath(aleppoPoint, chart.get('Rural Damascus'))
     }, {
-        id: 'London - Birmingham',
+        id: 'Aleppo - Homs',
         path: pointsToPath(aleppoPoint, chart.get('Homs'), true)
     }, {
-        id: 'London - Bristol',
+        id: 'Aleppo - Deir-ez-Zor',
         path: pointsToPath(aleppoPoint, chart.get('Deir-ez-Zor'), true)
     }]
 });
