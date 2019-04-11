@@ -39,7 +39,14 @@ var chart = Highcharts.mapChart('container', {
     series: [{
         // Use the gb-all map with no data as a basemap
         mapData: Highcharts.maps['countries/sy/sy-all'],
-        name: 'Basemap',
+        keys: ['code_hasc', 'value'],
+            joinBy: 'code_hasc',
+            name: 'Random data',
+            states: {
+                hover: {
+                    color: '#a4edba'
+                }
+            },
         borderColor: '#666666',
         nullColor: 'rgba(200, 200, 200, 0.3)',
         showInLegend: false
@@ -163,14 +170,16 @@ chart.addSeries({
     }, {
         id: 'Aleppo - Deir-ez-Zor',
         path: pointsToPath(aleppoPoint, chart.get('Deir-ez-Zor'), true)
-    }]
+    }, { id: 'Aleppo - Lattakia : 1,500 IDPs',
+    path: pointsToPath(aleppoPoint, chart.get('Lattakia'), true)
+}]
 });
 
 // Add a series of lines for Lerwick
 chart.addSeries({
     name: 'Returnees',
     type: 'mapline',
-    lineWidth: 2,
+    lineWidth: 4,
     color: Highcharts.getOptions().colors[5],
     data: [{
         id: 'From Dara to Deir-ez-Zor ',
